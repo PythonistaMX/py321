@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PRINCIPAL</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="container">
+    <etiquette>
+        <div id="banner"><span style="color:#ffffff;"><br><br><br><br><br><br><font size="4"><a href="index.html#" class="class1">RESTAURANTE-BAR</a></font><br><font size="5"><a href="index.html#" class="class1">"LA FONDA DE LA MARQUESA"</a></font><br><font size="2"><a href="index.html#" class="class1">EL LUGAR DE LOS AMIGOS Y CÓMPLICES DESDE 1987</a></font></span>
+            
+
+        </div>
+        <div class="container">
+    <ul id="navPyra">
+        
+        <li><a class="active" href="#">Principal</a></li>
+      <li><a href="menu.html">Menú</a></li>
+      <li><a href="equipo.html">Equipo</a></li>
+        
+      <!--
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Order</a></li>
+      -->
+    </ul>
+  </div>
+  <div id="side-menu">
+      
+  <!--
+    <div id="navcontainer">
+      <h2>Links</h2>
+      <ul id="navlist">
+        <li><a href="#">Snapp Happy</a></li>
+        <li><a href="#">TODC</a></li>
+        <li><a href="#">Andreas Viklund</a></li>
+        <li><a href="#">James Koster</a> </li>
+        <li><a href="#">CSS play</a></li>
+        <li><a href="#">Listamatic </a> </li>
+      </ul>
+    </div>
+    
+    <h2>More info</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+    -->
+  </div>
+        </etiquette>
+    <div id="footer"> 
+        <div style="float:center;width:640px;height:6em;margin:0px 15px 15px 320px;font-family:Open Sans;font-size:14px;font-weight:regular; line-height:16px; color:#cc9933;text-align:center;"> 
+            <span style="color:#000000;"><font face="myThirdFont">Somos la mejor opción de nueva <b>cocina mexicana</b> al sur de la Ciudad de México.<br>Nuestros platillos están basados en las típicas recetas de la abuela, pero con un toque de modernidad.<br /><br /></font><i>¡El pan de pulque es tan delicioso como los recuerdos de mi juventud!<br>-Rigoberto Astudillo. Cliente desde 2004.</i>
+                </span> 
+                         <span style="color: #C86000;">
+                         </span> 
+        </div>
+    </div>
+  <div id="content">
+    <!--<h2>Welcome to <span style="float:center;width:640px;height:6em;margin:5px 15px 15px 10px;font-family:georgia,arial,helvetica;font-size:1.2em;font-weight:bold; line-height:24px; color:#cc9933;text-align:right;">Autumn Daze</span> Template</h2>
+    <blockquote> This template has been tested in Mozilla Firefox and IE7. The page validates as XHTML 1.0 Transitional using valid CSS. It will work in browser widths of 800x600, 1024x768 &amp; 1280x1064. <br />
+      For more FREE CSS templates visit <a href="http://www.mitchinson.net">my website</a>.</blockquote>
+      -->
+    <br><br><br>
+    <p></p>
+      <p><img class="myborder" src="icono_superior.png"/><br><font color='#f7931e'><font face="mySecondFont"><font size = 2><b>ESTE MES LE OFRECEMOS NUESTRO</b></font></font><br><font face="mySecondFont"><font size = "5"><b>MENÚ TRADICIONAL</b></font></font><br>de $250.00 a sólo $180.00 pesos.<br>No incluye bebidas</font><br></p>
+      <p><img class="myborder" src="icono_inferior.png" alt="foto here"/></p>
+          <p><font face="myThirdFont">Sábados y Domingos, Desayuno Buffet. De 9:00 a 13:00hrs.</font></p>
+      <p><img class="myborder" src="icono_molcajete.png" alt="foto here"/></p>
+      <p><b><font face="myFirstFont"><font size = "2"> <a href="menu.html">TOCA AQUÍ PARA VER NUESTRO MENÚ.</a></font></font></b><br></p>
+      <p><img class="myborder" src="icono_chile.png" alt="foto here"/></p>
+      <p><b><font face="myFirstFont"><font size = "2"><a href="equipo.html">TODOS LO QUE COLABORAMOS EN LA FONDA DE LA MARQUESA ESTAMOS PARA SERVIRTE.</a></font></font></b><br></p>
+     
+      <p> <br><br><font face="myThirdFont"><font size = 2>Contamos con estacionamiento y Valet Parking.<br>Contamos con áreas verdes y juegos para niños.<br>Pregunte por nuestros paquetes para grupos y eventos especiales.<br>Somos orgullosos miembros de la AMECOT.</font></font></p>
+      
+      
+  </div>
+  <div id="footer"> 
+      Calle Mar del Oro No. 18, Col. San Jacinto el Bajo, Coyoacán, C.P. 100003, México, D.F.<br>correo electrónico: reservaciones@fonda-marquesa.com.mx<br>Reservaciones al (55) 1161-11345
+      <!--
+      <a href="#">principal</a> | <a href="mailto:none.net">contacto</a> | <a href="http://validator.w3.org/check?uri=referer">html</a> | <a href="http://jigsaw.w3.org/css-validator">css</a> | &copy; 2007 Anyone | Design by <a href="http://www.mitchinson.net"> www.mitchinson.net</a><br/><!--<a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a> -->
+
+</div>
+</div>
+</body>
+</html>
