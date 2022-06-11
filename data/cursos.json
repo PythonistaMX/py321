@@ -1,0 +1,80 @@
+{"serie": "py100", 
+"nombre": "Python b\u00e1sico", 
+"cursos": 
+    [
+        {"clave": "py101", 
+        "nombre": "Introducci\u00f3n a la programaci\u00f3n con Python", 
+        "temario": 
+        [
+            {"nombre": "Introducci\u00f3n"},
+            {"nombre": "Python y Jupyter"}, 
+            {"nombre": "Palabras_reservadas y nombres"}, 
+            {"nombre": "Introspecci\u00f3n y ayuda"},
+            {"nombre": "Expresiones y comentarios"},
+            {"nombre": "Tipos de datos en Python"}, 
+            {"nombre": "Conversi\u00f3n de tipos b\u00e1sicos"}, 
+            {"nombre": "Colecciones en Python"}, 
+            {"nombre": "Expresiones con operadores"},
+            {"nombre": "Entrada y salida est\u00e1ndar"},
+            {"nombre": "Declaraciones y bloques de c\u00f3digo"}, 
+            {"nombre": "Condicionales"}, 
+            {"nombre": "Ciclos e interrupciones de flujo"},
+            {"nombre": "Iteraciones"}, 
+            {"nombre": "Funciones"}, 
+            {"nombre": "Tipos list y tuple"}, 
+            {"nombre": "El tipo str"}, 
+            {"nombre": "f-strings"}, 
+            {"nombre": "Tipos bytes y bytearray"}, 
+            {"nombre": "El tipo dict"}, 
+            {"nombre": "Tipos set y frozenset"}, 
+            {"nombre": "Bases de la programaci\u00f3n funcional"}, 
+            {"nombre": "Gesti\u00f3n de excepciones"}, 
+            {"nombre": "Iteradores y generadores"}, 
+            {"nombre": "Completado de elementos"}, 
+            {"nombre": "Lectura y escritura de archivos"}, 
+            {"nombre": "M\u00f3dulo y paquetes"}, 
+            {"nombre": "Distribuci\u00f3n de c\u00f3digo"}, 
+            {"nombre": "Gesti\u00f3n de paquetes"},
+            {"nombre": "Entornos virtuales"}
+        ]
+        },
+        {    
+        "clave": "py111", 
+        "nombre": "Programaci\u00f3n orientada a objetos con Python", 
+        "temario": 
+        [
+            {"nombre": "Atributos y m\u00e9todos especiales"}, 
+            {"nombre": "Interfaces, implementaciones y encapsulamiento"}, 
+            {"nombre": "Propiedades"}, 
+            {"nombre": "M\u00e9todos de clase y m\u00e9todos est\u00e1ticos"}, 
+            {"nombre": "Herencia"}, 
+            {"nombre": "Mixins"}, 
+            {"nombre": "Clases abstractas y duck typing"}, 
+            {"nombre": "Excepciones personalizadas"}, 
+            {"nombre": "Persistencia de objetos"}
+        ]
+        }, 
+        {"clave": "py121", 
+            "nombre": "Gesti\u00f3n de datos y web scraping con Python", 
+            "temario": 
+        [
+            {"nombre": "Funciones para flujos de datos"}, 
+            {"nombre": "Archivos CSV"}, 
+            {"nombre": "Caso de uso: Control de asistencia"}, 
+            {"nombre": "M\u00f3dulos de fecha y hora"}, 
+            {"nombre": "N\u00fameros aleatorios"}, 
+            {"nombre": "Expresiones regulares"}, 
+            {"nombre": "Archivos JSON"}, 
+            {"nombre": "Archivos XLS"}, 
+            {"nombre": "Archivos PDF"}, 
+            {"nombre": "Los m\u00f3dulos urllib y beautifulsoup"}, 
+            {"nombre": "XML con elementtree"}, 
+            {"nombre": "Web scraping automatizado con scrapy"}, 
+            {"nombre": "Acceso a la API de Twitter"}, 
+            {"nombre": "Introducci\u00f3n a Requests"},
+            {"nombre": "Conexiones a bases de datos"}, 
+            {"nombre": "Introducci\u00f3n a SQLAlchemy"}
+        ]
+        }
+    ]
+}
