@@ -18,6 +18,10 @@ Este curso asume que el alumno ya completo Py101, Py111 y Py311.
 | Py111 | Programacion Orientada a Objetos con Python | PythonistaMX/py111 |
 | Py311 | Fundamentos para Ingenieria de Datos | PythonistaMX/py311 |
 
+Adicionalmente, conocimientos basicos de **Docker** y **Linux** son recomendados
+para aprovechar mejor el curso, aunque no estrictamente necesarios gracias al uso
+de Dev Containers.
+
 ### Continuacion de la ruta
 
 Py321 es el segundo curso de la ruta de Ingenieria de Datos:
@@ -26,9 +30,11 @@ Py321 es el segundo curso de la ruta de Ingenieria de Datos:
 |---|---|---|
 | Py311 | Fundamentos para Ingenieria de Datos | ✅ Este curso previo |
 | Py321 | Orquestacion con Apache Airflow | ✅ Este curso |
-| Py331 | Pipelines batch y streaming con Apache Beam | Proximamente |
-| Py341 | Ciclo de vida de datos con Spark y PySpark | Proximamente |
-| Py351 | Buenas practicas de Ingenieria de Datos | Proximamente |
+| Py331 | Ciclo de vida de datos con Spark y PySpark | Proximamente |
+| Py341 | Pipelines batch y streaming con Apache Beam | Proximamente |
+| Py351 | Data Stream: Mensajería con RabbitMQ y Kafka (Python) | Proximamente |
+| Py361 | Data Apps Interactivas (Streamlit/Dash) | Proximamente |
+| Py371 | Buenas practicas de Ingenieria de Datos | Proximamente |
 
 ## 🚀 Acerca del Curso
 
