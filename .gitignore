@@ -82,6 +82,9 @@ target/
 plan_series.md
 PLAN_PY321.md
 
+# Claude Code
+.claude/
+
 
 # IPython
 profile_default/
