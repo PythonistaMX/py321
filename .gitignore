@@ -78,6 +78,11 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# Local planning docs
+plan_series.md
+PLAN_PY321.md
+
+
 # IPython
 profile_default/
 ipython_config.py

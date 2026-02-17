@@ -1,0 +1,26 @@
+{
+  "name": "py321-airflow",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "username": "vscode"
+    }
+  },
+  "containerEnv": {
+    "AIRFLOW_HOME": "/home/vscode/airflow",
+    "START_AIRFLOW": "false"
+  },
+  "postCreateCommand": "python -m pip install --upgrade pip && python -m pip install -r requirements.txt --constraint \"https://raw.githubusercontent.com/apache/airflow/constraints-3.1.7/constraints-3.11.txt\"",
+  "postStartCommand": "bash .devcontainer/start-airflow.sh",
+  "forwardPorts": [
+    8080
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  }
+}
