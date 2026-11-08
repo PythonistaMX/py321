@@ -21,7 +21,7 @@ pero integra un par de notebooks introductorios para alinear conceptos clave.
 |---|---|---|
 | Py101 | Introduccion a la Programacion con Python | [PythonistaMX/py101](https://github.com/PythonistaMX/py101) |
 | Py111 | Programacion Orientada a Objetos con Python | [PythonistaMX/py111](https://github.com/PythonistaMX/py111) |
-| Py311 | Fundamentos para Ingenieria de Datos | [PythonistaMX/py311](https://github.com/PythonistaMX/py311) |
+| Py311 | Fundamentos de Python para Ingenieria y Analitica de Datos | [PythonistaMX/py311](https://github.com/PythonistaMX/py311) |
 
 Adicionalmente, conocimientos basicos de **Docker** y **Linux** son recomendados
 para aprovechar mejor el curso, aunque no estrictamente necesarios gracias al uso
@@ -31,13 +31,13 @@ de Dev Containers.
 
 | Curso | Descripcion | Estado |
 |---|---|---|
-| Py311 | Fundamentos para Ingenieria de Datos | ✅ Curso previo |
+| Py311 | Fundamentos de Python para Ingenieria y Analitica de Datos | ✅ Curso previo |
 | Py321 | Orquestacion con Apache Airflow | 📍 Este curso |
-| Py331 | Ciclo de vida de datos con Spark y PySpark | 🔜 Proximamente |
+| Py331 | Spark, PySpark y SparkSQL | 🔜 Proximamente |
 | Py341 | Pipelines batch y streaming con Apache Beam | 🔜 Proximamente |
-| Py351 | Data Stream: Mensajeria con RabbitMQ y Kafka (Python) | 🔜 Proximamente |
-| Py361 | Data Apps Interactivas (Streamlit/Dash) | 🔜 Proximamente |
-| Py371 | Buenas practicas de Ingenieria de Datos | 🔜 Proximamente |
+| Py351 | Streaming con Python (RabbitMQ y Kafka) | 🔜 Proximamente |
+| Py361 | Data Apps: Streamlit, Dash y FastAPI | 🔜 Proximamente |
+| Py371 | DataOps y Data Engineering Moderno | 🔜 Proximamente |
 
 ## 🚀 Acerca del Curso
 
