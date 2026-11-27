@@ -6,5 +6,5 @@ apache-airflow==3.1.7
 apache-airflow-providers-sqlite==4.2.1
 jupyterlab==4.6.6
 ipykernel==7.1.0
-nbformat==5.10.4
+nbformat==5.11.1
 nbclient==0.10.4
