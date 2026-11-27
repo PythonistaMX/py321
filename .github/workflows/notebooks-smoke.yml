@@ -1,0 +1,106 @@
+# Valida la sintaxis de los cuadernos y hace una prueba corta de Airflow
+# (migrar la base SQLite y parsear los DAG de ejemplo con DagBag),
+# sin arrancar `airflow standalone`.
+name: Notebooks Smoke Test
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      CONSTRAINTS: https://raw.githubusercontent.com/apache/airflow/constraints-3.1.7/constraints-3.11.txt
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0  # v7.1.0
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt --constraint "$CONSTRAINTS"
+
+      - name: Validar notebooks y sintaxis
+        run: |
+          python - <<'PY'
+          import ast
+          import glob
+          import sys
+
+          import nbformat
+
+          NOTEBOOKS = sorted(glob.glob("[0-9][0-9]_*.ipynb"))
+          if not NOTEBOOKS:
+              sys.exit("[VALIDACIÓN] No se encontraron notebooks.")
+
+          fallas = []
+          for path in NOTEBOOKS:
+              nb = nbformat.read(path, as_version=4)
+              nbformat.validate(nb)
+              for i, cell in enumerate(nb.cells):
+                  if cell.cell_type != "code":
+                      continue
+                  fuente = "\n".join(
+                      l for l in cell.source.splitlines()
+                      if not l.lstrip().startswith(("%", "!"))
+                      and not l.lstrip().startswith(("pip ", "pip3 ", "conda "))
+                  )
+                  if not fuente.strip():
+                      continue
+                  try:
+                      compile(
+                          fuente,
+                          f"{path}[{i}]",
+                          "exec",
+                          flags=ast.PyCF_ALLOW_TOP_LEVEL_AWAIT | ast.PyCF_ONLY_AST,
+                      )
+                  except SyntaxError as exc:
+                      fallas.append(f"{path} celda {i}: {exc}")
+              print(f"[OK] {path}")
+          if fallas:
+              print("\n[VALIDACIÓN] Fallaron:", *fallas, sep="\n  - ")
+              sys.exit(1)
+          PY
+
+      - name: Comprobar Airflow en SQLite (sin standalone)
+        env:
+          AIRFLOW_HOME: ${{ runner.temp }}/airflow
+          AIRFLOW__CORE__LOAD_EXAMPLES: "True"
+          AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:///${{ runner.temp }}/airflow/airflow.db
+          AIRFLOW__LOGGING__LOGGING_LEVEL: WARNING
+        run: |
+          mkdir -p "$AIRFLOW_HOME"
+          airflow db migrate
+          python - <<'PY'
+          import sys
+
+          from airflow.models.dagbag import DagBag
+
+          bag = DagBag(include_examples=True, collect_dags=True)
+          print(f"[HUMO] DAG parseados: {len(bag.dags)}")
+          if bag.import_errors:
+              print(f"[HUMO] Errores de importación: {len(bag.import_errors)}")
+              for path in sorted(bag.import_errors):
+                  print(f"  - {path}")
+              sys.exit(1)
+          if not bag.dags:
+              sys.exit("[HUMO] No se parseó ningún DAG de ejemplo.")
+          print("[OK] Airflow migró la base SQLite y DagBag cargó los DAG de ejemplo.")
+          PY

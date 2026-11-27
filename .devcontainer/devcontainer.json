@@ -1,8 +1,8 @@
 {
-  "name": "py321-airflow",
-  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "name": "py321 · Orquestación con Apache Airflow (Pythonista)",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bookworm",
   "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {
+    "ghcr.io/devcontainers/features/common-utils:2.7.2": {
       "username": "vscode"
     }
   },
@@ -10,16 +10,26 @@
     "AIRFLOW_HOME": "/home/vscode/airflow",
     "START_AIRFLOW": "false"
   },
-  "postCreateCommand": "python -m pip install --upgrade pip && python -m pip install -r requirements.txt --constraint \"https://raw.githubusercontent.com/apache/airflow/constraints-3.1.7/constraints-3.11.txt\"",
+  "postCreateCommand": "python -m pip install --upgrade pip && python -m pip install --no-cache-dir -r requirements.txt --constraint \"https://raw.githubusercontent.com/apache/airflow/constraints-3.1.7/constraints-3.11.txt\"",
   "postStartCommand": "bash .devcontainer/start-airflow.sh",
   "forwardPorts": [
     8080
   ],
   "customizations": {
     "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "jupyter.notebookFileRoot": "${fileDirname}"
+      },
       "extensions": [
         "ms-python.python",
+        "ms-python.vscode-pylance",
         "ms-toolsai.jupyter"
+      ]
+    },
+    "codespaces": {
+      "openFiles": [
+        "README.md"
       ]
     }
   }

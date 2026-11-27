@@ -63,16 +63,19 @@ Al completar este curso seras capaz de:
 
 ## 🛠️ Instalacion y Uso
 
+El entorno de trabajo es **GitHub Codespaces** o un [contenedor de desarrollo](https://containers.dev/) de *Visual Studio Code*. *Jupyter* corre dentro del contenedor. No se usa una máquina virtual.
+
 ### Opcion 1: Dev Container (recomendado)
 
-Este repositorio incluye configuracion para Dev Containers. Solo abre el
-proyecto en VS Code y selecciona **"Reopen in Container"**.
+En la página del repositorio, el menú *Code* permite crear un *Codespace*.
+En *VS Code*, abre el proyecto y selecciona **"Reopen in Container"**.
 
 El contenedor incluye:
 
 - Python 3.11
 - Apache Airflow 3.1.7
 - Provider de SQLite
+- *JupyterLab* y el kernel de *Python*
 
 Si quieres iniciar Airflow al abrir el contenedor, define la variable de entorno:
 
