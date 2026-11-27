@@ -2,7 +2,7 @@
 # Las versiones coinciden con las constraints oficiales de Airflow:
 # https://raw.githubusercontent.com/apache/airflow/constraints-3.1.7/constraints-3.11.txt
 # Instálalas con: pip install -r requirements.txt --constraint <esa URL>
-apache-airflow==3.1.7
+apache-airflow==3.4.0
 apache-airflow-providers-sqlite==4.2.1
 jupyterlab==4.6.6
 ipykernel==7.1.0
